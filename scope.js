@@ -28,13 +28,18 @@ console.log(B);
 console.log(C);
 console.log(F);
 
-//A(3)
-//E(3)
-//ReferenceError: G is not defined
-//B(B)
-//ReferenceError: D is not defined
-//H(something else )
-//ReferenceError: B is not defined
-//ReferenceError: C is not defined
-//F(F)
+//When you don't declare a variable and you assign a value to it, that variable 
+//will be going to the global scope
 
+var teacher  = "Kyle";
+
+function otherClass(){
+  teacher = "Susy";
+  topic = "React";
+  console.log("Welcome");
+}
+
+otherClass();
+
+console.log(teacher);
+console.log(topic);
